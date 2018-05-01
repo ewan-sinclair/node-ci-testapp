@@ -6,14 +6,12 @@ const app = express()
 
 api.init(app, ()=>{
 
-	describe('Test Hello World', () => {
-	  it('hello test', (done) => {
-	    return supertest(app).get('/')
-	    .expect(200)
-	    .expect('Content-Type', /json/)
-	    .expect('{"response":"Hello world!"}')
-	    .end(done)
-	  });
+	test('hello test', (done) => {
+		return supertest(app).get('/')
+		.expect(200)
+		.expect('Content-Type', /json/)
+		.expect('{"response":"Hello world!"}')
+		.end(done)
 	});
-
+	
 })
