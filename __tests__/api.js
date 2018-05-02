@@ -6,7 +6,7 @@ const app = express()
 
 api.init(app, ()=>{
 
-	test('hello test', () => {
+	test('Hello World', () => {
 		return supertest(app).get('/')
 		.expect(200)
 		.expect('Content-Type', /json/)
