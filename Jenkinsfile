@@ -8,8 +8,6 @@ pipeline {
 
     environment {
         CI = 'true'
-        HOME = '.'
-        npm_config_cache = 'npm-cache'
     }
     
     stages {
